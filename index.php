@@ -1,8 +1,3 @@
-<?php
-
-	//Require systeme if need login user
-
-?>
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -10,20 +5,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="Content-Type" content="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
 	</head>
 	<body>
 		<header>
 		
 		</header>
 		<main>
-			<section>
-				<form action="" method="POST">
+		<?php if(0) : ?>
+			<h1>You are connected</h1>
+			<button id="btn_logout">Connect</button>
+		<?php else : ?>
+			<h1>You are not connected</h1>
+			<from>
+				<div>
 					<input id="username" type="text" placeholder="Username"/>
+				</div>
+				<div>
 					<input id="password" type="password" placeholder="Password"/>
-					<button id="login_btn" type="button">Login</button>
-					<button id="logout_btn" type="button">Logout</button>
-				</form>
-			</section>
+				</div>
+				<div>
+					<button id="btn_connect">Connect</button>
+				</div>
+			</from>
+		<?php endif; ?>
 		</main>
 		<footer>
 		
