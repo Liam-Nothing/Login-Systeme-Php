@@ -1,0 +1,112 @@
+/* To disable blank at the to of the page */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway", sans-serif;
+}
+
+/*********************************************************************************/
+
+/* Page with footer at bottom */
+
+body {
+	position: relative;
+	min-height: 100vh;
+	transition: 0.2s;
+	background-color: #ffffff;
+}
+
+main {
+	padding-bottom: 5.5rem;
+}
+
+.footer {
+	background-color: #fcfcfc;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-top: 1.0rem; 
+	padding-bottom: 1.0rem; 
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	box-shadow: 0 2px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	font-size: 12px;
+}
+
+/*********************************************************************************/
+
+/* Nav bar*/
+
+header {
+	transition: 0.4s;
+	z-index: 10;
+	/*overflow: hidden;*/
+	position: fixed;
+	top:0;
+	width: 100%;
+}
+
+header.scroll {
+	background-color: #fcfcfc;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+header ul {
+	list-style-type: none;
+}
+
+header a {
+	float: left;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	transition: 0.5s;
+}
+
+.scroll a {
+	color: #3a3a3a !important;
+}
+
+header img {
+	filter: invert(1);
+}
+
+.scroll img {
+	filter: invert(0);
+}
+
+header.scroll a:hover {
+	background-color: #e0e0e0;
+}
+
+header ul.at_right a {
+	float: right;
+}
+
+/*MOVE ?*/
+.menu_modal a{
+	display: block;
+}
+
+/*********************************************************************************/
+
+/* Animations Opacity HTML */
+
+html {
+	animation: opac 1s;
+}
+
+@keyframes opac {
+	from {
+		opacity:0
+	}
+	to {
+		opacity:1
+	}
+}
+
+/*********************************************************************************/
