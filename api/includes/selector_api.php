@@ -7,8 +7,8 @@
 
         switch ($data["api"]) {
 
-			case "xxxx":
-                require_once(dirname(__FILE__)."/../xxxxx/xxxxxx.php");
+			case "ne_app_manager_login":
+                require_once(dirname(__FILE__)."/../ne_app_manager/ne_app_manager_login.php");
 				break;
 
             default:
