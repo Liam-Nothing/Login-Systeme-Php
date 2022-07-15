@@ -30,7 +30,7 @@ function getAuth() {
 }
 
 function Default() {
-    document.getElementById("btn_connect").addEventListener("click", function () { getAuth(); }, false);
+    document.getElementById("btn_login").addEventListener("click", function () { getAuth(); }, false);
 }
 
 Default();
