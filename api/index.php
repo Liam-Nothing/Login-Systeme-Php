@@ -14,18 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-$return_data = [
-    "id" => 0,
-    "type" => null,
-    "message" => null
-];
-
 require_once("includes/functs_db.php");
 require_once("includes/functs_utils.php");
 
 header('Content-Type: application/json');
 $data_from_client = (array) json_decode(stripslashes(file_get_contents("php://input")));
-$database = connectDB("nothingefdglobal", $config);
+$database = connectDB("login_exemple", $config);
 
 if (count($data_from_client) > 0) {
     require_once("includes/selector_api.php");
@@ -33,7 +27,6 @@ if (count($data_from_client) > 0) {
     $data_from_client = $_GET;
     require_once("includes/selector_api.php");
 } else {
-    $return_data["id"] = 2;
     $return_data["type"] = "error";
     $return_data["message"] = "Empty client data";
 }

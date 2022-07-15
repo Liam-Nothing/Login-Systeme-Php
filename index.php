@@ -31,7 +31,7 @@
             <div class="center block">
                 <input id="username" type="text" placeholder="Username" />
                 <input id="password" type="password" placeholder="Password" />
-                <button class="login_btn">Sing in</button>
+                <button id="btn_login" class="login_btn">Sing in</button>
             </div>
             <div class="hr"></div>
             <div>
