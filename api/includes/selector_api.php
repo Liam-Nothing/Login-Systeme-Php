@@ -3,7 +3,7 @@
 $data = array(["api", 60, 1]);
 $data = data_security($data_from_client, $data);
 
-if (empty($data["error"])) {
+if (empty($data["type"]) or $data["type"] != "error") {
     switch ($data["api"]) {
         case "authentication":
             require_once(dirname(__FILE__) . "/../login/getAuth.php");
