@@ -8,7 +8,7 @@ function RequestAPI(url, data) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let json = JSON.parse(xhr.responseText);
             switch (JSON.parse(data)["api"]) {
-                case "view_message_json":
+                case "authentication":
                     console.log(json);
                     break;
 

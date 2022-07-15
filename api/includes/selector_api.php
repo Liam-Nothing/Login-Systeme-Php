@@ -5,8 +5,8 @@ $data = data_security($data_from_client, $data);
 
 if (empty($data["error"])) {
     switch ($data["api"]) {
-        case "login":
-            require_once(dirname(__FILE__) . "/../ne_app_manager/ne_app_manager_login.php");
+        case "authentication":
+            require_once(dirname(__FILE__) . "/../login/getAuth.php");
             break;
 
         default:
