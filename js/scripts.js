@@ -1,26 +1,36 @@
-function RequestAPI(url, data){
+const url = "http://localhost/Login-Systeme-Php/api";
+
+function RequestAPI(url, data) {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let json = JSON.parse(xhr.responseText);
-            console.log(json);
+            switch (JSON.parse(data)["api"]) {
+                case "view_message_json":
+                    console.log(json);
+                    break;
+
+                default:
+                    console.log(`Api rep doesn't exist. ${JSON.parse(data)["api"]}.`);
+            }
         }
     };
     xhr.send(data);
 }
 
-function getAuth(){
-    let api = "app_ne_manager";
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+function getAuth() {
+    let data = {};
+    data["api"] = "authentication";
+    data["username"] = document.getElementById("username").value;
+    data["password"] = document.getElementById("password").value;
 
-    let data = JSON.stringify({"api": api, "username": username, "password": password});
-    let url = "http://localhost/Login-Systeme-Php/api";
-
-    RequestAPI(url, data);
+    RequestAPI(url, JSON.stringify(data));
 }
 
-document.getElementById("btn_connect").addEventListener("click", function () {getAuth();}, false); 
+function Default() {
+    document.getElementById("btn_connect").addEventListener("click", function () { getAuth(); }, false);
+}
+
+Default();
