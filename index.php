@@ -1,3 +1,8 @@
+<?php
+
+// Redirecting event
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
