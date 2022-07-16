@@ -1,4 +1,4 @@
-const url = "https://localhost/Login-Systeme-Php/api";
+const url = "http://localhost/Login-Systeme-Php/api/";
 
 function RequestAPI(url, data) {
     let xhr = new XMLHttpRequest();
