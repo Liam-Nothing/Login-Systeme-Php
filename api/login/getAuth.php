@@ -10,7 +10,7 @@ if(isset($_SESSION["id"])){
         $data = data_security($data_from_client, $data);
 
         if (empty($data["type"]) or $data["type"] != "error") {
-            $sqlr = $database->prepare("SELECT `username`, `password`, `id` FROM `login_exemple.sql` WHERE username = :username");
+            $sqlr = $database->prepare("SELECT `username`, `password`, `id` FROM `login_exemple` WHERE username = :username");
             $sqlr->bindParam(':username', $data["username"]);
             $sqlr->execute();
             $sqlr_rows = $sqlr->fetchAll();
