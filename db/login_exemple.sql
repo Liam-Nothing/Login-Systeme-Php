@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2022 at 11:05 PM
+-- Generation Time: Jul 20, 2022 at 09:28 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -31,14 +31,14 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(500) NOT NULL,
-  `pseudo` varchar(50) NOT NULL
+  `username` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `pseudo`) VALUES
+INSERT INTO `users` (`id`, `email`, `password`, `username`) VALUES
 (1, 'test@nothingelse.fr', '$2y$10$Y.4l9KrZIy41EVHbEXmIP.a/JBvnoADaL8y01cH.7SVu4lPtjIvmG', 'Test');
 
 --
@@ -51,7 +51,7 @@ INSERT INTO `users` (`id`, `email`, `password`, `pseudo`) VALUES
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `pseudo` (`pseudo`);
+  ADD UNIQUE KEY `pseudo` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
