@@ -11,7 +11,4 @@ function ImConnected($Connected = false, $redirectPageConnected = "index.php")
         header('Location: ' . $redirectPageConnected);
         exit(0);
     }
-    echo "error";
-    var_dump($_SESSION);
-    echo $Connected;
 }
