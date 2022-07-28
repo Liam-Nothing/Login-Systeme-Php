@@ -1,6 +1,7 @@
 <?php
 
-// Redirecting event
+require_once("includes/pathSecurity.php");
+ImConnected(true, "board.php");
 
 ?>
 <!DOCTYPE html>
