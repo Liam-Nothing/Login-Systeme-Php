@@ -1,7 +1,6 @@
 <?php
 
 if (isset($_SESSION["id"])) {
-    $return_data["id"] = 2;
     $return_data["type"] = "error";
     $return_data["message"] = "You are already logged";
 } else {
@@ -19,6 +18,8 @@ if (isset($_SESSION["id"])) {
                 if (password_verify($data["password"], $sqlr_rows[0]["password"])) {
                     $return_data["type"] = "success";
                     $return_data["message"] = "Good password";
+                    $_SESSION["id"] = $sqlr_rows[0]["id"];
+                    $_SESSION["username"] = $sqlr_rows[0]["username"];
                 } else {
                     $return_data["type"] = "error";
                     $return_data["message"] = "Bad password";
