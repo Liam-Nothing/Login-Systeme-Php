@@ -10,6 +10,10 @@ function RequestAPI(url, data) {
             switch (JSON.parse(data)["api"]) {
                 case "authentication":
                     console.log(json);
+                    console.log(json["type"]);
+                    if (json["type"] == "success") {
+                        window.location.replace("board.php");
+                    }
                     break;
 
                 default:
