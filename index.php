@@ -39,6 +39,9 @@ ImConnected(true, "board.php");
                 <p class="center small">By <a href="https://nothingelse.fr/">NothingElse.fr</a></p>
             </div>
         </section>
+        <section class="card alert hide" id="alert-conainer">
+            <p class="thin" id="alert-message">Alert !</p>
+        </section>
 
     </main>
     <footer>

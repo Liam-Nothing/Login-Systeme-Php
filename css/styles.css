@@ -66,6 +66,7 @@ main {
 }
 
 .card {
+    border: 1px solid #ccc;
     padding: 30px;
 
     margin: auto;
@@ -78,6 +79,32 @@ main {
     background: linear-gradient(145deg, #fafafa, #ebebeb);
     box-shadow: 20px 20px 60px #bebebe,
         -20px -20px 60px #ffffff;
+    
+    margin-bottom: 30px;
+}
+
+.alert {
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ff6464, #ffacac);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    position: relative;
+    top: 30px;
+    animation: 0.5s ease 0s forwards alternate view_error,  0.5s ease 3.5s forwards reverse view_error;
+}
+
+@keyframes view_error {
+    from {
+        opacity:0;
+        top: 30px;
+    }
+    to {
+        opacity:1;
+        top: 0px;
+    }
 }
 
 /************************************************************************************/
@@ -173,10 +200,6 @@ main {
     margin: 20px auto;
 }
 
-.card {
-    border: 1px solid #ccc;
-}
-
 .hr {
     height: 1px;
     width: 90%;
@@ -186,6 +209,10 @@ main {
 
 h1 {
     color: rgb(51, 51, 51);
+    font-weight: 200;
+}
+
+.thin {
     font-weight: 200;
 }
 
@@ -301,3 +328,20 @@ div {
 }
 
 /************************************************************************************/
+
+/* Animations Opacity HTML*/
+
+html {
+    animation: opac 1s;
+}
+
+@keyframes opac {
+    from {
+        opacity:0
+    }
+    to {
+        opacity:1
+    }
+}
+
+/*********************************************************************************/
