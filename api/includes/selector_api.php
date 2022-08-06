@@ -8,6 +8,9 @@ if (empty($data["type"]) or $data["type"] != "error") {
         case "authentication":
             require_once(dirname(__FILE__) . "/../login/getAuth.php");
             break;
+        case "logout":
+            require_once(dirname(__FILE__) . "/../login/getLogout.php");
+            break;
 
         default:
             $return_data["type"] = "error";
