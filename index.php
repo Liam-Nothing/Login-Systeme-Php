@@ -47,7 +47,7 @@ ImConnected(true, "board.php");
     <footer>
 
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
