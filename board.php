@@ -42,7 +42,7 @@ ImConnected(false);
 	<footer>
 
 	</footer>
-	<script src="js/board.js"></script>
+	<script src="js/scripts_board.js"></script>
 </body>
 
 </html>
