@@ -8,7 +8,7 @@ ImConnected(false);
 <html lang="fr">
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-lo8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="Content-Type" content="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -42,7 +42,8 @@ ImConnected(false);
 	<footer>
 
 	</footer>
-	<script src="js/board.js"></script>
+    <script src="js/scripts_api.js"></script>
+	<script src="js/scripts_board.js"></script>
 </body>
 
 </html>
