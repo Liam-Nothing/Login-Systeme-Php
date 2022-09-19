@@ -16,6 +16,16 @@ function AnswerAPI(answer_json, api_name) {
     }
 }
 
+/* Error "Uncaught ReferenceError: getCookieIsRegistered is not defined" => Test rename files */
+function getCookieIsRegistered() {
+    let data = {};
+    data["api"] = "cookie_is_registered";
+    data["cookie"] = getPHPSessionId();
+    // data["url"] = window.location.href;
+
+    RequestAPI(url, JSON.stringify(data));
+}
+
 function getAuth() {
     let data = {};
     data["api"] = "authentication";
