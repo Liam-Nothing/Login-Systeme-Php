@@ -11,7 +11,7 @@ function AnswerAPI(answer_json, api_name) {
             }
             break;
 
-        case "cookie_is_registered":
+        case "getpermpage":
             console.log(answer_json)
             break;
 
@@ -22,7 +22,7 @@ function AnswerAPI(answer_json, api_name) {
 
 function getCookieIsRegistered() {
     let data = {};
-    data["api"] = "cookie_is_registered";
+    data["api"] = "getpermpage";
     data["php_session_id"] = getPHPSessionId();
     data["url"] = window.location.href;
 
@@ -43,3 +43,4 @@ function Default() {
 }
 
 Default();
+getCookieIsRegistered();
