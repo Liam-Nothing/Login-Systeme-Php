@@ -1,10 +1,8 @@
 <?php
 
-$data = array(["cookie", 60, 1], ["url", 500, 1]);
-$data = data_security($data_from_client, $data);
-
-if (empty($data["type"]) or $data["type"] != "error") {
-	$return_data["type"] = "success";
+if (isset($_SESSION["id"])) {
+    $return_data["type"] = "success";
+    $return_data["level"] = $_SESSION["level"];
 }else{
-	$return_data["type"] = "error";
+    $return_data["type"] = "error";
 }

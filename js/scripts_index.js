@@ -11,17 +11,20 @@ function AnswerAPI(answer_json, api_name) {
             }
             break;
 
+        case "cookie_is_registered":
+            console.log(answer_json)
+            break;
+
         default:
-            console.log(`Api rep doesn't exist. ${JSON.parse(data)["api"]}.`);
+            console.log(`Api rep doesn't exist. ${api_name}.`);
     }
 }
 
-/* Error "Uncaught ReferenceError: getCookieIsRegistered is not defined" => Test rename files */
 function getCookieIsRegistered() {
     let data = {};
     data["api"] = "cookie_is_registered";
-    data["cookie"] = getPHPSessionId();
-    // data["url"] = window.location.href;
+    data["php_session_id"] = getPHPSessionId();
+    data["url"] = window.location.href;
 
     RequestAPI(url, JSON.stringify(data));
 }
