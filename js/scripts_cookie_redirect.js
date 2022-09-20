@@ -3,9 +3,10 @@ function getPHPSessionId(){
     var jsId = document.cookie.match(/PHPSESSID=[^;]+/);
     if(jsId != null) {
         if (jsId instanceof Array)
-            jsId = jsId[0].substring(11);
+            /* substring "PHPSESSID=" */
+            jsId = jsId[0].substring(10);
         else
-            jsId = jsId.substring(11);
+            jsId = jsId.substring(10);
     }
     return jsId;
 }

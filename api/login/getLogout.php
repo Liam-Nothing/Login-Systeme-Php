@@ -24,5 +24,3 @@ if (isset($_SESSION["id"])) {
 	$return_data["type"] = "error";
 	$return_data["message"] = "You are not connected";
 }
-
-?>

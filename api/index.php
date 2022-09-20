@@ -14,8 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-session_start();
-
 require_once("includes/functs_db.php");
 require_once("includes/functs_utils.php");
 

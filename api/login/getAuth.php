@@ -9,7 +9,7 @@ if (isset($_SESSION["id"])) {
         $data = data_security($data_from_client, $data);
 
         if (empty($data["type"]) or $data["type"] != "error") {
-            $sqlr = $database->prepare("SELECT `username`, `password`, `id` FROM `users` WHERE username = :username");
+            $sqlr = $database->prepare("SELECT `username`, `password`, `id`, `level` FROM `users` WHERE username = :username");
             $sqlr->bindParam(':username', $data["username"]);
             $sqlr->execute();
             $sqlr_rows = $sqlr->fetchAll();
@@ -19,6 +19,7 @@ if (isset($_SESSION["id"])) {
                     $return_data["type"] = "success";
                     $return_data["message"] = "Good password";
                     $_SESSION["id"] = $sqlr_rows[0]["id"];
+                    $_SESSION["level"] = $sqlr_rows[0]["level"];
                     $_SESSION["username"] = $sqlr_rows[0]["username"];
                 } else {
                     $return_data["type"] = "error";
