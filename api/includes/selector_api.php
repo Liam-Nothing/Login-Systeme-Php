@@ -24,8 +24,8 @@ if (empty($data["type"]) or $data["type"] != "error") {
         case "logout":
             require_once(dirname(__FILE__) . "/../login/getLogout.php");
             break;
-        case "cookie_is_registered":
-            require_once(dirname(__FILE__) . "/../login/getCookieIsRegistered.php");
+        case "getpermpage":
+            require_once(dirname(__FILE__) . "/../login/getPermPage.php");
             break;
 
         default:
