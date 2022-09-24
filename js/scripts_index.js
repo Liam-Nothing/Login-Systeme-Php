@@ -20,7 +20,7 @@ function AnswerAPI(answer_json, api_name) {
     }
 }
 
-function getCookieIsRegistered() {
+function getPermPage() {
     let data = {};
     data["api"] = "getpermpage";
     data["php_session_id"] = getPHPSessionId();
@@ -43,4 +43,4 @@ function Default() {
 }
 
 Default();
-getCookieIsRegistered();
+getPermPage();
