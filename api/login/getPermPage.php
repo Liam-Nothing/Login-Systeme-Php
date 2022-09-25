@@ -1,22 +1,33 @@
 <?php
 
-if (isset($_SESSION["id"])) {
-    $data = array(["url", 500, 1]);
-    $data = data_security($data_from_client, $data);
+$data = array(["url", 500, 1], ["redirect", 500, 1],  ["need_connect", 1, 1]);
+$data = data_security($data_from_client, $data);
 
-    if (empty($data["type"]) or $data["type"] != "error") {
-        $return_data["type"] = "success";
-        $return_data["level"] = $_SESSION["level"];
-        $return_data["url"] = $data["url"];
+if (empty($data["type"]) or $data["type"] != "error") {
 
-        /* get routes to set level require */
+    $return_data["type"] = "success";
+    $actual_path = implode("/", array_slice(explode("/", $data["url"]), 3));
 
+    if ($data["need_connect"] == 1 && isset($_SESSION["id"])) {
 
-    } else {
-        $return_data["type"] = "error";
-        $return_data["data"] = $data;
+        $dict_path_level = array(
+            "123" => ["Login-Systeme-Php/index.html"]
+        );
+
+        if (in_array($actual_path, $dict_path_level[$_SESSION["level"]])) {
+            $return_data["redirect"] = False;
+        } else {
+            $return_data["redirect"] =  $data["redirect"];
+        }
+
+    } else if ($data["need_connect"] == 0 && !isset($_SESSION["id"])) {
+
+        $return_data["redirect"] = False;
+
+    }else{
+        $return_data["redirect"] = $data["redirect"];
     }
+
 } else {
     $return_data["type"] = "error";
-    $return_data["message"] = "No session id";
 }

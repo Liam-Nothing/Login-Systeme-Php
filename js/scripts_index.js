@@ -13,6 +13,7 @@ function AnswerAPI(answer_json, api_name) {
 
         case "getpermpage":
             console.log(answer_json)
+            if(answer_json["type"] == "success") {}
             break;
 
         default:
@@ -25,6 +26,8 @@ function getPermPage() {
     data["api"] = "getpermpage";
     data["php_session_id"] = getPHPSessionId();
     data["url"] = window.location.href;
+    data["redirect"] = "Login-Systeme-Php/board.php";
+    data["need_connect"] = 0;
 
     RequestAPI(url, JSON.stringify(data));
 }
