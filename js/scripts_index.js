@@ -13,7 +13,9 @@ function AnswerAPI(answer_json, api_name) {
 
         case "getpermpage":
             console.log(answer_json)
-            if(answer_json["type"] == "success") {}
+            if (answer_json["type"] == "success" && answer_json["redirect"] != false) {
+                window.location.replace("http://" + window.location.hostname + "/" + answer_json["redirect"]);
+            }
             break;
 
         default:
