@@ -10,15 +10,17 @@ if (empty($data["type"]) or $data["type"] != "error") {
 
     if ($data["need_connect"] == 1 && isset($_SESSION["id"])) {
 
-        $dict_path_level = array(
-            "123" => ["Login-Systeme-Php/index.html"]
-        );
+        // $dict_path_level = array(
+        //     "123" => ["Login-Systeme-Php/index.html"]
+        // );
 
-        if (in_array($actual_path, $dict_path_level[$_SESSION["level"]])) {
-            $return_data["redirect"] = False;
-        } else {
-            $return_data["redirect"] =  $data["redirect"];
-        }
+        // if (in_array($actual_path, $dict_path_level[$_SESSION["level"]])) {
+            // $return_data["redirect"] = False;
+        // } else {
+            // $return_data["redirect"] =  $data["redirect"];
+        // }
+
+        $return_data["redirect"] = False;
 
     } else if ($data["need_connect"] == 0 && !isset($_SESSION["id"])) {
 
