@@ -3,7 +3,7 @@ function AnswerAPI(answer_json, api_name) {
         case "authentication":
             console.log(answer_json);
             if (answer_json["type"] == "success") {
-                window.location.replace("board.php");
+                window.location.replace("board.html");
             } else {
                 document.getElementById("alert-message").innerHTML = answer_json["message"];
                 document.getElementById("alert-conainer").classList.add("hide");
@@ -28,7 +28,7 @@ function getPermPage() {
     data["api"] = "getpermpage";
     data["php_session_id"] = getPHPSessionId();
     data["url"] = window.location.href;
-    data["redirect"] = "Login-Systeme-Php/board.php";
+    data["redirect"] = "Login-Systeme-Php/board.html";
     data["need_connect"] = 0;
 
     RequestAPI(url, JSON.stringify(data));
