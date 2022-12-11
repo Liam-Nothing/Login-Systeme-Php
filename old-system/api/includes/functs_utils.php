@@ -1,5 +1,12 @@
 <?php
 
+mb_internal_encoding('UTF-8');
+mb_http_output('UTF-8');
+
+$return_data = [
+    "type" => "none"
+];
+
 function data_security($data_client, $data_infos)
 {
     foreach ($data_infos as $data_info) {

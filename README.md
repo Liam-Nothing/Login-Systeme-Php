@@ -17,6 +17,7 @@ This is an exemple of login systeme with PHP.
   - And edit with yours creditials : 
     ```
     "host" => "localhost",
+    "dbname" => "login_exemple",
     "dbusername" => "root",
     "dbpassword" => ""
     ```

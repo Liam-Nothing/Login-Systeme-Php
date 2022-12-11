@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^Login$ login.php [L]
+RewriteRule ^Board$ board.php [L]
