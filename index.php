@@ -9,5 +9,6 @@
 <body>
     <a href="Login/">Login page</a>
     <a href="Board/">Board page</a>
+    <a href="Register/">Register page</a>
 </body>
 </html>
