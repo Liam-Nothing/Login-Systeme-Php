@@ -4,9 +4,9 @@ if (isset($_SESSION["id"])) {
     $return_data["type"] = "error";
     $return_data["message"] = "You are already logged";
 } else {
-    if (isset($data_from_client_POST)) {
+    if (isset($data_from_client)) {
         $data = array(["username", 60, 1], ["password", 500, 1]);
-        $data = data_security($data_from_client_POST, $data);
+        $data = data_security($data_from_client, $data);
 
         if (empty($data["type"]) or $data["type"] != "error") {
             $sqlr = $database->prepare("SELECT `username`, `password`, `id`, `level` FROM `users` WHERE username = :username");
