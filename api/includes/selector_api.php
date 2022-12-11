@@ -31,10 +31,13 @@ if (!(empty($data_from_client_GET["NE-API"]))) {
             case "getpermpage":
                 require_once(dirname(__FILE__) . "/../login/getPermPage.php");
                 break;
+            case "register":
+                require_once(dirname(__FILE__) . "/../login/getRegister.php");
+                break;
     
             default:
                 $return_data["type"] = "error";
-                $return_data["message"] = "API doesnt exist";
+                $return_data["message"] = "API doesn't exist";
         }
 
     }else{
